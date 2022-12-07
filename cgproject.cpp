@@ -1,15 +1,18 @@
-#include <stdio.h>
-#include <conio.h>
-#include <dos.h>
+//#include <stdio.h>
+//#include <conio.h>
+//#include <dos.h>
+#include <iostream>
 #include <graphics.h>
+#include <math.h>
+using namespace std;
 void go();
 void stop();
 void start();
-void main()
+int main()
 {
 int s, i;
 int gdriver = DETECT, gmode;
-initgraph(&gdriver, &gmode, "C:\\TC\\BGI");
+initgraph(&gdriver, &gmode, NULL);
 s = 0;
 for (i = 0; i < 400; i++)
 {
@@ -254,11 +257,6 @@ line(450, 154, 456, 158);
 rectangle(447, 180, 451, 376);
 
 rectangle(433, 80, 465, 180);
-
-settextstyle(3, 0, 2);
-
-outtextxy(200, 375, "CREATE BY ROHIT TECH STUDY");
-
 line(0, 376, 640, 376);
 
 line(0, 410, 640, 410);
@@ -268,7 +266,7 @@ void stop()
 
 {
 
-setfillstyle(1, RED);
+//setfillstyle(1, RED);
 
 circle(450, 100, 10);
 
@@ -282,9 +280,6 @@ rectangle(447, 180, 451, 376);
 
 rectangle(433, 80, 465, 180);
 
-settextstyle(3, 0, 2);
-
-outtextxy(200, 375, "CREATE BY ROHIT TECH STUDY");
 
 line(0, 376, 640, 376);
 line(0, 410, 640, 410);
@@ -292,14 +287,11 @@ line(0, 410, 640, 410);
 void start()
 {
 circle(450, 100, 10);
-setfillstyle(1, GREEN);
 circle(450, 130, 10);
 floodfill(452, 132, WHITE);
 circle(450, 160, 10);
 rectangle(447, 180, 451, 376);
 rectangle(433, 80, 465, 180);
-settextstyle(3, 0, 2);
-outtextxy(200, 375, "CREATE BY ROHIT TECH STUDY");
 line(0, 376, 640, 376);
 line(0, 410, 640, 410);
 }
